@@ -17,6 +17,7 @@
 		EC3C1684218DCE3900620097 /* cheerios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC3C1683218DCE3900620097 /* cheerios.jpg */; };
 		EC3C1686218DCED700620097 /* shrek.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EC3C1685218DCED700620097 /* shrek.JPG */; };
 		EC3C1688218DE1E000620097 /* UIimageRec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C1687218DE1E000620097 /* UIimageRec.swift */; };
+		EC3C168A218E132E00620097 /* UIStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C1689218E132E00620097 /* UIStuff.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EC3C1683218DCE3900620097 /* cheerios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheerios.jpg; sourceTree = "<group>"; };
 		EC3C1685218DCED700620097 /* shrek.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shrek.JPG; sourceTree = "<group>"; };
 		EC3C1687218DE1E000620097 /* UIimageRec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIimageRec.swift; sourceTree = "<group>"; };
+		EC3C1689218E132E00620097 /* UIStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStuff.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				EC3C167F218D7E4800620097 /* tarts.jpg */,
 				EC3C1647218D16D400620097 /* AppDelegate.swift */,
 				EC3C1649218D16D400620097 /* ViewController.swift */,
+				EC3C1689218E132E00620097 /* UIStuff.swift */,
 				EC3C164B218D16D400620097 /* Main.storyboard */,
 				EC3C164E218D16D600620097 /* Assets.xcassets */,
 				EC3C1650218D16D600620097 /* LaunchScreen.storyboard */,
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC3C164A218D16D400620097 /* ViewController.swift in Sources */,
+				EC3C168A218E132E00620097 /* UIStuff.swift in Sources */,
 				EC3C1688218DE1E000620097 /* UIimageRec.swift in Sources */,
 				EC3C1682218D975900620097 /* KeyHolder.swift in Sources */,
 				EC3C1648218D16D400620097 /* AppDelegate.swift in Sources */,
