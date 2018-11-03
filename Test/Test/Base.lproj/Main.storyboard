@@ -18,20 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="900.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KKa-cr-PvE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_8988.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="KKa-cr-PvE">
                                 <rect key="frame" x="67" y="154" width="240" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="900.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kSh-of-3fJ">
-                                <rect key="frame" x="86" y="154" width="240" height="219"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ap-NU-Z5M">
+                                <rect key="frame" x="119" y="487" width="137" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Take a Photo"/>
+                                <connections>
+                                    <action selector="ButtonToCam:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kCe-an-sjw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="image" destination="kSh-of-3fJ" id="p8g-EA-SdC"/>
+                        <outlet property="image" destination="KKa-cr-PvE" id="3kJ-xJ-6af"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -40,6 +45,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="900.jpg" width="900" height="900"/>
+        <image name="IMG_8988.JPG" width="4032" height="3024"/>
     </resources>
 </document>

@@ -12,8 +12,11 @@
 		EC3C164D218D16D400620097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC3C164B218D16D400620097 /* Main.storyboard */; };
 		EC3C164F218D16D600620097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC3C164E218D16D600620097 /* Assets.xcassets */; };
 		EC3C1652218D16D600620097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC3C1650218D16D600620097 /* LaunchScreen.storyboard */; };
-		EC3C1680218D7E4800620097 /* 900.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC3C167F218D7E4800620097 /* 900.jpg */; };
+		EC3C1680218D7E4800620097 /* tarts.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC3C167F218D7E4800620097 /* tarts.jpg */; };
 		EC3C1682218D975900620097 /* KeyHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C1681218D975900620097 /* KeyHolder.swift */; };
+		EC3C1684218DCE3900620097 /* cheerios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC3C1683218DCE3900620097 /* cheerios.jpg */; };
+		EC3C1686218DCED700620097 /* shrek.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EC3C1685218DCED700620097 /* shrek.JPG */; };
+		EC3C1688218DE1E000620097 /* UIimageRec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3C1687218DE1E000620097 /* UIimageRec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +27,11 @@
 		EC3C164E218D16D600620097 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC3C1651218D16D600620097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC3C1653218D16D600620097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC3C167F218D7E4800620097 /* 900.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 900.jpg; sourceTree = "<group>"; };
+		EC3C167F218D7E4800620097 /* tarts.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tarts.jpg; sourceTree = "<group>"; };
 		EC3C1681218D975900620097 /* KeyHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyHolder.swift; sourceTree = "<group>"; };
+		EC3C1683218DCE3900620097 /* cheerios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheerios.jpg; sourceTree = "<group>"; };
+		EC3C1685218DCED700620097 /* shrek.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shrek.JPG; sourceTree = "<group>"; };
+		EC3C1687218DE1E000620097 /* UIimageRec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIimageRec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,9 @@
 		EC3C1646218D16D400620097 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				EC3C167F218D7E4800620097 /* 900.jpg */,
+				EC3C1685218DCED700620097 /* shrek.JPG */,
+				EC3C1683218DCE3900620097 /* cheerios.jpg */,
+				EC3C167F218D7E4800620097 /* tarts.jpg */,
 				EC3C1647218D16D400620097 /* AppDelegate.swift */,
 				EC3C1649218D16D400620097 /* ViewController.swift */,
 				EC3C164B218D16D400620097 /* Main.storyboard */,
@@ -66,6 +74,7 @@
 				EC3C1650218D16D600620097 /* LaunchScreen.storyboard */,
 				EC3C1653218D16D600620097 /* Info.plist */,
 				EC3C1681218D975900620097 /* KeyHolder.swift */,
+				EC3C1687218DE1E000620097 /* UIimageRec.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -131,7 +140,9 @@
 				EC3C1652218D16D600620097 /* LaunchScreen.storyboard in Resources */,
 				EC3C164F218D16D600620097 /* Assets.xcassets in Resources */,
 				EC3C164D218D16D400620097 /* Main.storyboard in Resources */,
-				EC3C1680218D7E4800620097 /* 900.jpg in Resources */,
+				EC3C1680218D7E4800620097 /* tarts.jpg in Resources */,
+				EC3C1686218DCED700620097 /* shrek.JPG in Resources */,
+				EC3C1684218DCE3900620097 /* cheerios.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC3C164A218D16D400620097 /* ViewController.swift in Sources */,
+				EC3C1688218DE1E000620097 /* UIimageRec.swift in Sources */,
 				EC3C1682218D975900620097 /* KeyHolder.swift in Sources */,
 				EC3C1648218D16D400620097 /* AppDelegate.swift in Sources */,
 			);
