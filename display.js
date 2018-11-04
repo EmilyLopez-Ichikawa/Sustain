@@ -13,11 +13,10 @@ $(document).ready(function(){
       .then(resp => resp.json())
       .then(data => {
         if(data.success){
-          console.log("Successfully got category");
-
-          $("#currentCompany").append("<div id='nowCompName'>" + data.company + "</div>");
           $("#currentCompany").append("<div id='nowBrandName'>" + data.food + "</div>");
+          $("#currentCompany").append("<div id='nowCompName'>" + data.company + "</div>");
           $("#currentCompany").append("<div id='nowScore'>" + data.score + "</div>");
+          // document.getElementById('nowScore').style.color = setColor(data.score);
 
           getRecommendations(data.category);
         }else{
@@ -39,11 +38,32 @@ $(document).ready(function(){
     .then(resp => resp.json())
     .then(data => {
       for(let i = 0; i < numSuggestions; i++){
-        let suggestion = $("#suggestionsList").append("<div class='listItem' id='suggestion"+i+"'></div>");
-        suggestion.append("<div id=compName'>"+ data[i].company + "</div>");
-        suggestion.append("<div id='brandName'>"+ data[i].food + "</div>");
-        suggestion.append("<div id='score'>"+ data[i].score + "</div>");
-        console.log(data[i]);
+        const newDiv = document.createElement("div");
+        // newDiv.appendChild(document.createTextNode(data[i]));
+        newDiv.setAttribute("class", "listItem");
+        // $("#suggestionsList").append("<div class='listItem' id='suggestion"+i+"'></div>");
+
+        const brandName = document.createElement("div");
+        brandName.appendChild(document.createTextNode(data[i].food));
+        brandName.setAttribute("class", "brandName");
+        newDiv.appendChild(brandName);
+
+        const compName = document.createElement("div");
+        compName.appendChild(document.createTextNode(data[i].company));
+        compName.setAttribute("class", "compName");
+        newDiv.appendChild(compName);
+
+        const score = document.createElement("div");
+        score.appendChild(document.createTextNode(data[i].score));
+        score.setAttribute("class", "score");
+        newDiv.appendChild(score);
+
+
+        // newDiv.append("<div id=compName'>"+ data[i].company + "</div>");
+        // newDiv.append("<div id='brandName'>"+ data[i].food + "</div>");
+        // newDiv.append("<div id='score'>"+ data[i].score + "</div>");
+        document.getElementById("suggestionsList").appendChild(newDiv);
+
       }
 
     })
@@ -51,3 +71,25 @@ $(document).ready(function(){
   }
 
 });
+// 
+//
+// function setColor(score){
+//   let color;
+//   switch(score){
+//     case 95:
+//       color="#97db68";
+//     case 90:
+//       color="#99b85b";
+//     case 85:
+//       color="#9f9c51";
+//     case 80:
+//       color="#a87b46";
+//     case 75:
+//       color="#b0633e";
+//     case 70:
+//       color="#b84e38";
+//     case default:
+//       color="#bd4736";
+//   }
+//   return color;
+// }
