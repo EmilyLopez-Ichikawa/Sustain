@@ -1,4 +1,5 @@
 <?php
+  ini_set("session.cookie_httponly", 1);
   session_start();
   require "database.php";
   header("Content-Type: application/json");
@@ -13,9 +14,8 @@
   $stmt->bind_param('s', $food_name);
   $stmt->execute();
   $stmt->bind_result($score, $company, $category);
-  $stmt->fetch();
 
-  if($stmt){
+  if($stmt->fetch()){
   	echo json_encode(array(
   		"success" => true,
       "score" => $score,
@@ -23,15 +23,17 @@
       "category" => $category,
       "food" => $food_name
   	));
+    $stmt->close();
   	exit;
   } else{
     echo json_encode(array(
   		"success" => false,
+      "food" => $food_name,
   		"message" => "Error: The selected brand is not in the database."
   	));
+    $stmt->close();
   	exit;
   }
 
-  $stmt->close();
 
 ?>

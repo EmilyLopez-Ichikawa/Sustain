@@ -7,6 +7,13 @@
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
+  <?php
+    session_start();
+    if(isset($_GET['food'])){
+      $_SESSION['food'] = str_replace("_", " ", $_GET['food']);      
+    }
+   ?>
+
   <body>
     <button type="button" id="button">Click</button>
     <div id="currentCompany"></div>
