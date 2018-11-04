@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", getCategory, false);
 document.getElementById("button").addEventListener("click", getCategory, false);
-
+const numSuggestions = 3;
 
 function getCategory(){
   fetch("query_brand.php", {
@@ -8,24 +8,41 @@ function getCategory(){
         headers: { 'content-type': 'application/json',
                     'Accept': 'application/json'}
     })
-    .then(resp => resp.jsom())
-    .then(data => { 
-        // if(data.success){
-        //     document.getElementById("loggedout").style.display = "none";
-        //     document.getElementById("loggedin").style.display = "block";
-        //     document.getElementById("loggedInAs").textContent = "Logged in as " + data.user;
-        //     let days = document.getElementsByClassName("day");
-        //     for(let i = 0; i < days.length; i++){
-        //       days[i].addEventListener("click", createEventModal, false);
-        //     }
-        // }else{
-        //   document.getElementById("loggedout").style.display = "block";
-        //   document.getElementById("loggedin").style.display = "none";
-        //   let days = document.getElementsByClassName("day");
-        //   for(let i = 0; i < days.length; i++){
-        //     days[i].removeEventListener("click", createEventModal);
-        //   }
-        // }
+    .then(resp => resp.json())
+    .then(data => {console.log(data);
+      if(data.success){
+        console.log("Successfully got category!");
+        $("#currentCompany").append("<div id='nowCompName'>" + data.company + "</div>");
+        $("#currentCompany").append("<div id='nowBrandName'>" + data.food + "</div>");
+        $("#currentCompany").append("<div id='nowScore'>" + data.score + "</div>");
+
+        getRecommendations(data.category);
+      }else{
+        console.log("Error: " + data.message);
+      }
     })
     .catch(error => console.error('Error:',error))
+}
+
+function getRecommendations(category){
+const data = {'category': category};
+
+fetch("query_by_category.php", {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'content-type': 'application/json',
+                  'Accept': 'application/json'}
+  })
+  .then(resp => resp.json())
+  .then(data => {
+    for(let i = 0; i < numSuggestions; i++){
+      let suggestion = $("#suggestionsList").append("<div class='listItem' id='suggestion"+i+"'></div>");
+      suggestion.append("<div id=compName'>"+ data[i].company + "</div>");
+      suggestion.append("<div id='brandName'>"+ data[i].food + "</div>");
+      suggestion.append("<div id='score'>"+ data[i].score + "</div>");
+      console.log(data[i]);
+    }
+
+  })
+  .catch(error => console.error('Error:',error))
 }

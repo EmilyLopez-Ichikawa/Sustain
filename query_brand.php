@@ -4,7 +4,6 @@
   header("Content-Type: application/json");
 
   $food_name = $_SESSION['food'];
-  $food_name = "Cheerios";
 
   $stmt = $mysqli->prepare("select score, company, category from foods where name=?");
   if(!$stmt){
@@ -21,7 +20,8 @@
   		"success" => true,
       "score" => $score,
       "company" => $company,
-      "category" => $category
+      "category" => $category,
+      "food" => $food_name
   	));
   	exit;
   } else{

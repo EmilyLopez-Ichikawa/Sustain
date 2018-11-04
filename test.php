@@ -7,6 +7,9 @@ $json_str = file_get_contents('php://input');
 $json_obj = json_decode($json_str, true);
 
 $food_name = $json_obj["responses"][0]["logoAnnotations"][0]["description"];
+
+//~*~*~*~*~*~*~*~COMMENT OUT-------------JUST FOR TESTING~*~*~*~*~*~*~*~*~*~*~//
+$food_name = "Cheerios";
 $_SESSION['food'] = $food_name;
 
 $stmt = $mysqli->prepare("select score, company from foods where name=?");
