@@ -16,7 +16,7 @@ $(document).ready(function(){
           $("#currentCompany").append("<div id='nowBrandName'>" + data.food + "</div>");
           $("#currentCompany").append("<div id='nowCompName'>" + data.company + "</div>");
           $("#currentCompany").append("<div id='nowScore'>" + data.score + "</div>");
-          // document.getElementById('nowScore').style.color = setColor(data.score);
+          document.getElementById('nowScore').style.color = setColor(data.score);
 
           getRecommendations(data.category);
         }else{
@@ -39,9 +39,7 @@ $(document).ready(function(){
     .then(data => {
       for(let i = 0; i < numSuggestions; i++){
         const newDiv = document.createElement("div");
-        // newDiv.appendChild(document.createTextNode(data[i]));
         newDiv.setAttribute("class", "listItem");
-        // $("#suggestionsList").append("<div class='listItem' id='suggestion"+i+"'></div>");
 
         const brandName = document.createElement("div");
         brandName.appendChild(document.createTextNode(data[i].food));
@@ -57,6 +55,7 @@ $(document).ready(function(){
         score.appendChild(document.createTextNode(data[i].score));
         score.setAttribute("class", "score");
         newDiv.appendChild(score);
+        score.style.color = setColor(data[i].score);
 
 
         // newDiv.append("<div id=compName'>"+ data[i].company + "</div>");
@@ -71,25 +70,31 @@ $(document).ready(function(){
   }
 
 });
-// 
-//
-// function setColor(score){
-//   let color;
-//   switch(score){
-//     case 95:
-//       color="#97db68";
-//     case 90:
-//       color="#99b85b";
-//     case 85:
-//       color="#9f9c51";
-//     case 80:
-//       color="#a87b46";
-//     case 75:
-//       color="#b0633e";
-//     case 70:
-//       color="#b84e38";
-//     case default:
-//       color="#bd4736";
-//   }
-//   return color;
-// }
+
+
+function setColor(score){
+  let color = "#ffffff";
+  if(score == 95){
+    color="#97db68";
+  }
+  if(score == 90){
+    color="#99b85b";
+  }
+  if(score == 85){
+    color="#9f9c51";
+  }
+  if(score == 80){
+    color="#a87b46";
+  }
+  if(score == 75){
+    color="#b0633e";
+  }
+  if(score == 70){
+    color="#b84e38";
+  }
+  if(score == 60){
+    color="#bd4736";
+  }
+
+  return color;
+}
